@@ -83,7 +83,7 @@ body {
 	display: none;
 }
 section {
-	padding: 100px 0;
+	padding: 50px 0;
 }
 .sec_tit {
 	font-weight: 800;
@@ -118,6 +118,7 @@ header {
 	left: 0;
 	right: 0;
 	padding: 50px 200px;
+	z-index: 1;
 }
 .head_search_logo_btn {
 	padding: 20px 0;
@@ -187,6 +188,7 @@ form {
 	width: 167px;
 	padding: 14px 0;
 	transition: 0.3s;
+	color: #fff;
 }
 .btn:hover {
 	box-shadow: 0px 6px 5px 2px #0a97e8;
@@ -221,28 +223,31 @@ form {
 		#011627 76.64%,
 		#011627 100%
 	);
+	z-index: 0;
 }
 
 /* Text main */
 .home_main_tit {
 	justify-content: center;
 	text-align: center;
-	width: 600px;
+	width: 640px;
 	height: 200px;
-	margin: 155px 310px 170px;
+	margin: 150px 280px 170px;
 }
-.main_tit {
+.home_tit {
 	font-family: 'Stardom';
 	font-weight: 700;
 	font-size: 120px;
 	text-align: center;
 	padding-bottom: 60px;
 }
-.main_txt {
+.home_txt {
 	padding: 20px 0;
+	font-weight: 600;
 }
-.main_txt_in {
-	font-size: 14px;
+.home_txt_in {
+	font-size: 15px;
+	line-height: 20px;
 }
 
 /* Ссылки main */
@@ -267,11 +272,16 @@ form {
 	padding: 10px 25px;
 }
 
-/* Блок-2 menu */
-.menu {
-	position: relative;
+/* фон */
+.main_img {
 	background: url(../img/LIGHTS_body.svg) center no-repeat;
 	background-size: cover;
+	height: 2963px;
+}
+
+/* Блок-2 menu */
+.menu {
+	margin-top: 0;
 }
 
 /* Заголовок */
@@ -292,12 +302,15 @@ form {
 /* Меню информация */
 .main_menu_info {
 	position: relative;
-	width: 900px;
-	margin: 100px 200px;
+	margin: 50px auto 150px;
+	width: 1000px;
 }
 
 .main_menu {
-	padding: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	padding: 30px 50px;
 	position: relative;
 }
 
@@ -309,34 +322,110 @@ form {
 	transition: color 0.3s ease-in-out;
 }
 
-.main_menu a.active {
-	color: #41ead4;
-}
-
 .main_menu a:hover {
 	color: #41ead4;
 }
 
-.indicator {
+/* Основная линия */
+.progressBar {
 	position: absolute;
-	bottom: 0;
-	height: 3px;
+	height: 2px;
 	background: #41ead4;
-	transition: all 0.3s ease-in-out;
-	width: 120px;
+	width: 1000px;
+	bottom: -5px;
 	left: 0;
+	opacity: 0.5;
+	transition: all 0.3s ease-in-out;
+}
+
+/* Вспомогательная линия для эффекта увеличения */
+.progressHighlight {
+	position: absolute;
+	height: 2px;
+	background: #41ead4;
+	width: 0px;
+	bottom: -5px;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
 }
 
 /* card */
-.slide-text {
+.slider-container {
 	position: relative;
-	margin: 243px 120px;
+	width: 400px;
+	height: 500px;
+	overflow: hidden;
+	margin: 15px 0 0 150px;
 }
-.productc-card {
-	height: 607px;
-	width: 486px;
-	margin: 5px 150px;
+.slider {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.slide {
 	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+.slide.active {
+	opacity: 1;
+}
+.slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 15px;
+	box-shadow: 0px 5px 20px rgba(0, 255, 200, 0.2);
+}
+.slide-info {
+	position: relative;
+	top: 185px;
+	left: 10px;
+	color: white;
+	z-index: 1;
+}
+.line {
+	width: 50px;
+	height: 2px;
+	background-color: #41ead4;
+	border-left: 2px solid #41ead4;
+	margin-bottom: 5px;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.5s ease-in-out;
+}
+.number {
+	font-size: 18px;
+	color: #41ead4;
+}
+.title {
+	font-size: 14px;
+	font-weight: bold;
+}
+.prev,
+.next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(255, 255, 255, 0.2);
+	border: none;
+	color: white;
+	font-size: 24px;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.prev {
+	left: 10px;
+}
+.next {
+	right: 10px;
+}
+.prev:hover,
+.next:hover {
+	background: rgba(255, 255, 255, 0.4);
 }
 .dots {
 	background: url(../img/icons/Dots.svg) center no-repeat;
@@ -347,10 +436,39 @@ form {
 	position: absolute;
 }
 
+.button {
+	position: relative;
+	background: #00c9e0;
+	border-radius: 30px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	text-transform: uppercase;
+	height: 62px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 250px;
+	padding: 14px 0;
+	transition: 0.3s;
+	color: #fff;
+}
+.button:hover {
+	box-shadow: 0px 6px 5px 2px #0a97e8;
+}
+.link {
+	transition: 0.3s;
+}
+.link:hover {
+	box-shadow: 0px 6px 5px 2px #17a3ee;
+}
+
 .Adventure_text {
 	width: 485px;
 	height: 300px;
-	margin: 150px 0;
+	margin: 150px 150px 0 0;
 }
 .Adventure_tit {
 	font-size: 65px;
@@ -358,25 +476,27 @@ form {
 	padding-bottom: 30px;
 }
 .Chill_txt {
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: 500;
 	padding: 25px 0;
 }
 .Adventure_txt {
-	font-size: 15px;
+	font-size: 16px;
+	padding-bottom: 25px;
 }
 
 .menu_link_img {
-	width: 154px;
-	height: 85px;
-	margin: 100px 1100px 0;
+	width: 164px;
+	height: 95px;
+	margin: 50px 1100px 0;
 	padding: 25px;
 }
 .menu_link_txt {
-	margin: 5px 0;
+	margin: 10px;
 }
 .menu_img {
 	bottom: 0;
+	top: 15px;
 }
 .indicator_link {
 	width: 154px;
@@ -384,18 +504,20 @@ form {
 	right: 0;
 	border-bottom: 2px solid #41ead4;
 	border-right: 2px solid #41ead4;
+	padding: 0 3px;
 }
-/* .Information {
+.main_base {
+	height: 100%;
 	background: url(../img/about.png) center no-repeat;
 	background-size: cover;
-} */
+}
 .info_text {
 	width: 321px;
 	height: 371px;
 	font-size: 18px;
 }
 .About_tit {
-	font-size: 43px;
+	font-size: 73px;
 	font-family: 'Stardom';
 	padding: 20px 0;
 }
@@ -413,4 +535,261 @@ form {
 .info_img {
 	width: 395px;
 	height: 395px;
+}
+.base_1 {
+	font-family: Larsseit;
+	height: 1760px;
+	border-radius: 8px;
+	justify-self: center;
+	text-align: center;
+	color: white;
+}
+
+.base_2 {
+	background-color: #011627;
+	margin: o 40px;
+}
+
+.base_1 .headerrr {
+	width: 545px;
+	height: 79px;
+	position: relative;
+	top: 90px;
+	text-align: center;
+	justify-self: center;
+}
+.base_1 .headerrr h2 {
+	line-height: 79.2px;
+	font-size: 72px;
+	width: 580px;
+	height: 79px;
+	font-weight: 700;
+	font-family: 'Stardom';
+	margin-top: -90px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.headerrr h2:hover {
+	-webkit-text-stroke: 0.3px #fff;
+	color: transparent;
+}
+.headerrr h2:not(:hover) {
+	-webkit-text-stroke: 0.3px #fff;
+}
+
+.base_1 .headerrr p {
+	width: 570px;
+	height: 33px;
+	line-height: 36px;
+	font-size: 24px;
+	font-weight: 500;
+	padding-top: -20px;
+	margin-bottom: 10px;
+	transition: 0.5s;
+}
+.headerrr p:hover {
+	-webkit-text-stroke: 0.3px #09f4f4;
+	color: transparent;
+}
+.headerrr p:not(:hover) {
+	-webkit-text-stroke: 0.3px #09f4f4;
+}
+.main {
+	margin: 0 10% 0 10%;
+}
+
+.main .box {
+	transition: transform 1s ease; /* Плавное изменение размера */
+}
+
+.main .box:hover {
+	transform: scale(1.1); /* Увеличение при наведении */
+}
+
+.main .box:not(:hover) {
+	transform: scale(1); /* Возвращение к исходному размеру */
+}
+
+.main .box {
+	width: 510px;
+	height: 504px;
+	display: inline-block;
+	background-color: #02223b;
+	position: relative;
+	top: 250px;
+	margin: 20px;
+}
+.main .box span {
+	width: 32px;
+	height: 25px;
+	color: #41ead4;
+	font-size: 70px;
+	font-weight: 900;
+	position: absolute;
+	left: 50px;
+	top: 70px;
+}
+.main .box .text {
+	width: 334px;
+	height: 249px;
+	position: absolute;
+	left: 102px;
+	top: 65px;
+	text-align: left;
+	font-size: 18px;
+	line-height: 34px;
+	text-indent: 9px;
+}
+.main .box .text .head {
+	font-weight: 700;
+}
+.main .box .text .texts {
+	font-weight: 300;
+}
+.main .foot img {
+	width: 80px;
+	height: 90px;
+	position: absolute;
+	left: 102px;
+	top: 365px;
+}
+.main .foot p {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 20px;
+	letter-spacing: 2px;
+	text-align: left;
+	position: relative;
+	top: 360px;
+	left: 200px;
+}
+.footers {
+	width: 424px;
+	height: 172px;
+	justify-self: center;
+	text-align: center;
+	top: 350px;
+	position: relative;
+	transition: 0.5s;
+}
+.footers h2 {
+	font-size: 72px;
+	line-height: 79px;
+	text-align: center;
+	font-weight: 700;
+	width: 448px;
+	margin-top: -20px;
+	font-family: 'Stardom';
+	transition: 0.5s;
+}
+.footers h2:hover {
+	-webkit-text-stroke: 0.3px #fff;
+	color: transparent;
+}
+.footers h2:not(:hover) {
+	-webkit-text-stroke: 0.3px #fff;
+}
+.footers p {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 36px;
+	text-align: center;
+	width: 350px;
+	position: relative;
+	left: 35px;
+	transition: 0.5s;
+}
+
+.footers p:hover {
+	-webkit-text-stroke: 0.3px #09f4f4;
+	color: transparent;
+}
+.footers p:not(:hover) {
+	-webkit-text-stroke: 0.3px #09f4f4;
+}
+footer {
+	font-family: 'Playfair Display';
+	color: white;
+	position: relative;
+	width: 100%;
+	height: 527px;
+}
+footer .table {
+	height: 200px;
+	padding-left: 175px;
+}
+footer .box {
+	vertical-align: top;
+	display: inline-block;
+	margin-right: 140px;
+}
+footer h3 {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	height: 24px;
+}
+footer a {
+	margin: 20px 0 20px 0;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 19px;
+	color: white;
+	text-decoration: none;
+	display: block;
+	height: 19px;
+}
+footer .bottom {
+	justify-self: center;
+	text-align: center;
+	position: relative;
+	top: 100px;
+}
+footer .nt {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 69px;
+}
+.tochka {
+	color: #41ead4;
+}
+.vert {
+	position: relative;
+	top: 670px;
+	color: none;
+	border: 0;
+	height: 2px;
+	width: 80px;
+	rotate: 90deg;
+	background: linear-gradient(#09f4f4, #00c9e0);
+	border-radius: 13px;
+}
+.gor {
+	position: relative;
+	left: -14px;
+	width: 50px;
+	height: 1px;
+	background-color: #41ead4;
+	color: none;
+	border: 0;
+}
+.cube {
+	rotate: 45deg;
+	top: -12px;
+	left: 49px;
+	position: relative;
+	width: 5px;
+	height: 5px;
+	background-color: none;
+	color: none;
+	border: 1px solid #41ead4;
+}
+.links {
+	display: flex;
+	gap: 18px;
+	cursor: pointer;
+}
+
+.table .box {
+	font-family: 'Larsseit';
 }
