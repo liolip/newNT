@@ -231,14 +231,14 @@ form {
 	text-align: center;
 	width: 640px;
 	height: 200px;
-	margin: 150px 280px 170px;
+	margin: 190px 280px 170px;
 }
 .home_tit {
 	font-family: 'Stardom';
 	font-weight: 700;
-	font-size: 120px;
+	font-size: 95px;
 	text-align: center;
-	padding-bottom: 60px;
+	padding-bottom: 45px;
 }
 .home_txt {
 	padding: 20px 0;
@@ -266,6 +266,7 @@ form {
 .link_txt {
 	transform: rotate(270deg);
 	display: inline-block;
+	font-size: 15px;
 }
 .link_img {
 	padding: 10px 25px;
@@ -276,11 +277,6 @@ form {
 	background: url(../img/LIGHTS_body.svg) center no-repeat;
 	background-size: cover;
 	height: 2963px;
-}
-
-/* Блок-2 menu */
-.menu {
-	margin-top: 0;
 }
 
 /* Заголовок */
@@ -353,7 +349,6 @@ form {
 	position: relative;
 	width: 400px;
 	height: 500px;
-	overflow: hidden;
 	margin: 15px 0 0 150px;
 }
 .slider {
@@ -375,7 +370,7 @@ form {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	border-radius: 15px;
+	border-radius: 20px;
 	box-shadow: 0px 5px 20px rgba(0, 255, 200, 0.2);
 }
 .slide-info {
@@ -426,12 +421,11 @@ form {
 .next:hover {
 	background: rgba(255, 255, 255, 0.4);
 }
-.dots {
-	background: url(../img/icons/Dots.svg) center no-repeat;
-	background-size: cover;
+.dots_img {
 	width: 230px;
 	height: 230px;
-	margin: 436px 95px;
+	bottom: -54px;
+	left: -54px;
 	position: absolute;
 }
 
@@ -514,6 +508,7 @@ form {
 	width: 321px;
 	height: 371px;
 	font-size: 18px;
+	margin: 220px 45px;
 }
 .About_tit {
 	font-size: 73px;
