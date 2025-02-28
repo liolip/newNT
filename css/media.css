@@ -23,3 +23,13 @@
 		max-width: 100%;
 	}
 }
+@keyframes spark-animation {
+	0% {
+		transform: translate(0, 0) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(var(--dx), var(--dy)) scale(0.3);
+		opacity: 0;
+	}
+}
