@@ -315,7 +315,7 @@ form {
 }
 
 .btn:hover {
-	background: #000000;
+	background: #021d33;
 	color: #ffffff;
 	box-shadow: 0 0 80px #ffffff8c;
 }
@@ -1032,7 +1032,7 @@ form {
 
 .base_1 {
 	font-family: Larsseit;
-	height: 1760px;
+	height: 160px;
 	border-radius: 8px;
 	justify-self: center;
 	text-align: center;

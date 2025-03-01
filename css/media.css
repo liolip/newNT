@@ -2,6 +2,178 @@
 	.container {
 		max-width: 960px;
 	}
+	.header {
+		padding: 50px 50px;
+	}
+	.search {
+		margin-right: 200px;
+	}
+	.star-1 {
+		top: 38%;
+		left: 75%;
+	}
+	.star-2 {
+		top: 38%;
+		left: 75%;
+	}
+	.star-3 {
+		top: 38%;
+		left: 75%;
+	}
+	.star-4 {
+		top: 38%;
+		left: 75%;
+	}
+	.star-5 {
+		top: 38%;
+		left: 75%;
+	}
+	.star-6 {
+		top: 38%;
+		left: 75%;
+	}
+	.btn:hover .star-1 {
+		top: 23%;
+		left: 70%;
+	}
+	.btn:hover .star-2 {
+		top: 28%;
+		left: 69%;
+	}
+	.btn:hover .star-3 {
+		top: 25%;
+		left: 73%;
+	}
+	.btn:hover .star-4 {
+		top: 25%;
+		left: 73%;
+	}
+	.btn:hover .star-5 {
+		top: 25%;
+		left: 73%;
+	}
+	.btn:hover .star-6 {
+		top: 25%;
+		left: 73%;
+	}
+	.home_main_tit {
+		margin: 190px 41px 100px;
+	}
+	.main_link {
+		margin: 0;
+	}
+	.menu_info {
+		margin: 0;
+	}
+	.slider_container {
+		margin: -30px;
+	}
+	.menu_link_img {
+		margin: 50px 0 0 610px;
+	}
+	.Adventure_text {
+		width: 317px;
+		height: 281px;
+		margin: 69px 0 0 0;
+	}
+	.Adventure_tit {
+		font-size: 45px;
+	}
+	.About_info_img {
+		width: 700px;
+		height: 875px;
+		margin: 0;
+	}
+	.info_img {
+		width: 350px;
+		height: 300px;
+	}
+	.info_text {
+		width: 415px;
+		margin: 100px 150px;
+	}
+	.info_points_img {
+		opacity: 0;
+	}
+	.main .foot img {
+		width: 70px;
+		height: 70px;
+		position: absolute;
+		left: 102px;
+		top: 350px;
+	}
+	.main .box {
+		width: 440px;
+		height: 440px;
+		display: inline-block;
+		background-color: #02223b;
+		position: relative;
+		top: 150px;
+		margin: 10px;
+	}
+	.main .box .text {
+		width: 295px;
+		height: 150px;
+		position: absolute;
+		left: 99px;
+		top: 65px;
+		text-align: left;
+		font-size: 18px;
+		line-height: 35px;
+		text-indent: 0px;
+	}
+
+	.main .foot img {
+		width: 69px;
+		height: 70px;
+		position: absolute;
+		left: 55px;
+		top: 335px;
+	}
+	.main .foot p {
+		top: 345px;
+		left: 140px;
+	}
+	.main {
+		margin: 0;
+	}
+	.vert {
+		position: relative;
+		top: 500px;
+		color: none;
+		border: 0;
+		height: 2px;
+		width: 80px;
+		rotate: 90deg;
+		background: linear-gradient(#09f4f4, #00c9e0);
+		border-radius: 13px;
+		left: 460px;
+	}
+	footer .bottom {
+		top: 150px;
+	}
+	.menu_txt_info {
+		width: 513px;
+	}
+	.main_menu_info {
+		width: 780px;
+	}
+	.progressBar {
+		width: 780px;
+	}
+	footer .box {
+		margin-top: 1367px;
+		vertical-align: top;
+		display: inline-block;
+		margin-right: 30px;
+	}
+	footer .table {
+		height: 0px;
+		padding-left: 135px;
+	}
+	footer .bottom {
+		top: 1570px;
+	}
 }
 @media screen and (max-width: 990px) {
 	.container {
